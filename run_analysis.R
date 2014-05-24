@@ -65,6 +65,7 @@ columns <- grep("mean$|mean\\.|std", colnames(mergedDF), value = TRUE)
 tidyDF <- mergedDF[, c("activity", columns)]
 # Write tidyDf to Disk
 write.csv(tidyDF, "UCI-HAR-MeanStd-TrainTest-dataset.csv", row.names = FALSE)
+write.table(tidyDF, "UCI-HAR-MeanStd-TrainTest-dataset.txt", row.names = FALSE)
 
 
 #### Construct Second Tidy Dataset
